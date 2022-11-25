@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Welcome to Coin Pay
+      Welcome to Coin Verse
     </div>
   );
 }
