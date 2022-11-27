@@ -3,7 +3,14 @@ import { Switch, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
 import "./App.css";
-import { Navbar, Exchanges, Homepage, Cryptocurrencies, CryptoDetails, News } from "./components";
+import {
+  Navbar,
+  Exchanges,
+  Homepage,
+  Cryptocurrencies,
+  CryptoDetails,
+  News,
+} from "./components";
 
 const App = () => {
   return (
@@ -28,13 +35,27 @@ const App = () => {
                 <CryptoDetails />
               </Route>
               <Route exact path="/news">
-                    <News />
+                <News />
               </Route>
             </Switch>
           </div>
         </Layout>
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Copyright © 2021
+            <Link to="/">Coin Verse Inc.</Link> <br />
+            All Rights Reserved.
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
-      <div className="footer"></div>
     </div>
   );
 };
