@@ -10,13 +10,10 @@ const Navbar = () => {
     <div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
-          <Link to="/">Coin Verse</Link>
-        </Typography.Title>
-        {/* <Button className="menu-control-container">
-
-            </Button> */}
-        <Menu theme='dark'>
+        <Typography.Title level={2} className="logo"><Link to="/">Coin Verse</Link></Typography.Title>
+        <Button className="menu-control-container"><MenuOutlined /></Button>
+      </div>
+        <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
@@ -30,7 +27,6 @@ const Navbar = () => {
             <Link to="/news">News</Link>
           </Menu.Item>
         </Menu>
-      </div>
     </div>
   )
 };
